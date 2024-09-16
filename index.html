@@ -32,6 +32,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "-Od2cDd-JQVDNorC_",
+      });
+   })();
+</script>
+
 
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -335,7 +346,7 @@
                          </div>
 
                          <div id="contact-form">
-                              <form action="#template-mo" method="post">
+                              <form method="post">
                                    <div class="wow fadeInUp" data-wow-delay="1s">
                                         <input name="fullname" type="text" class="form-control" id="fullname" placeholder="Your Name">
                                    </div>
@@ -346,7 +357,7 @@
                                         <textarea name="message" rows="5" class="form-control" id="message" placeholder="Write your message..."></textarea>
                                    </div>
                                    <div class="wow fadeInUp col-md-6 col-sm-8" data-wow-delay="1.6s">
-                                        <input name="submit" type="submit" class="form-control" id="submit" value="Send">
+                                        <input name="submit" type="submit" class="form-control" onclick="sendMail()" id="submit" value="Send">
                                    </div>
                               </form>
                          </div>

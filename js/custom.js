@@ -79,3 +79,14 @@
 
   });
 
+
+//Send Mail
+  function sendMail(){
+    let parms = {
+      name: document.getElementById("fullname").value,
+      email: document.getElementById("fullname").value,
+      message: document.getElementById("fullname").value,
+    }
+    emailjs.send("service_mjcgaaq","template_jrfxmf4",parms).then(alert("Message Sent!!!"))
+  }
+
