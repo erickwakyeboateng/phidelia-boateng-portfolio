@@ -83,7 +83,7 @@
 //Send Mail
   function sendMail(){
     let parms = {
-      name: document.getElementById("fullname").value,
+      fullname: document.getElementById("fullname").value,
       email: document.getElementById("email").value,
       message: document.getElementById("message").value,
     }
