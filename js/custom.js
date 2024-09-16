@@ -79,7 +79,7 @@
 
   });
 
-
+/*
 //Send Mail
   function sendMail(){
     let parms = {
@@ -90,3 +90,35 @@
     emailjs.send("service_mjcgaaq","template_jrfxmf4",parms).then(alert("Message Sent!!!"))
   }
 
+*/
+
+
+function sendMail() {
+  // Get values from the input fields
+  let fullname = document.getElementById("fullname").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+  
+  // Check if any field is empty
+  if (!fullname || !email || !message) {
+    alert("Please fill in all fields.");
+    return; // Exit the function if validation fails
+  }
+  
+  // Create parameters for the email
+  let parms = {
+    fullname: fullname,
+    email: email,
+    message: message,
+  };
+  
+  // Send the email using emailjs
+  emailjs.send("service_mjcgaaq", "template_jrfxmf4", parms)
+    .then(() => {
+      alert("Message Sent!!!"); // Show success message
+    })
+    .catch((error) => {
+      console.error("Error sending message:", error); // Handle any errors
+      alert("Failed to send message. Please try again.");
+    });
+}
