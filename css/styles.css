@@ -477,6 +477,33 @@ a:hover, a:active, a:focus {
 }
 
 
+/*---------------------------------------
+    Certification section              
+-----------------------------------------*/
+
+#certification {
+  background: #E3AE57;
+}
+
+#certification .certification-img {
+  background: url('../images/education-img.jpg') no-repeat;
+}
+
+#certification .media-heading {
+  margin-bottom: 0px;
+}
+
+#certification .media .fa {
+  font-size: 42px;
+  margin-right: 14px;
+}
+
+#certification small {
+  color: #886D1E;
+  font-weight: bold;
+}
+
+
 
 /*---------------------------------------
    Quotes section              
